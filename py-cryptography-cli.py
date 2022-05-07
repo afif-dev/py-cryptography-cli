@@ -51,7 +51,7 @@ Author: afif-dev https://github.com/afif-dev
     """
     print(startuptxt)
 
-    parser = argparse.ArgumentParser(prog='py-cryptography-cli', description='Process some string.')
+    parser = argparse.ArgumentParser(prog='py-cryptography-cli', description='Encrypt & decrypt string.')
     parser.add_argument('text', metavar='text', type=str, nargs=1, help="encrypt/decrypt string")
     parser.add_argument('-k', '--key', metavar='xxxx', type=str, nargs='?', default = None, help='set key for cryptography')
 
