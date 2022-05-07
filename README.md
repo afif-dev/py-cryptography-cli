@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 py py-cryptography-cli.py -h
 ```
-5. Build cli output
+5. Build cli output (more refer to : https://pyinstaller.org/en/stable/usage.html)
 ```
 pyinstaller py-cryptography-cli.spec
 ```
