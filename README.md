@@ -4,6 +4,24 @@ Encrypt & decrypt string using cryptography.io
 
 CLI app included in distribution folder (dist/py-cryptography-cli.exe)
 
+![](https://github.com/afif-dev/py-cryptography-cli/blob/main/py-cryptography-cli-ss-encrypt.png)
+
+![](https://github.com/afif-dev/py-cryptography-cli/blob/main/py-cryptography-cli-ss-decrypt.png)
+
+## Basic Usage
+1. Help
+```
+py py-cryptography-cli -h
+```
+2. Encrypt text/string
+```
+py py-cryptography-cli "Hello Python, this is Py Cryptography CLI App"
+```
+3. Decrypt token
+```
+py py-cryptography-cli "<TOKEN>" -k "<KEY>"
+```
+
 ## Setup for Local Development
 
 1. Creating a virtual environment
@@ -34,3 +52,10 @@ pip freeze > requirements.txt
 ```
 deactivate
 ```
+
+## Reference Links
+- https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+- https://docs.python.org/3/library/index.html
+- https://docs.python.org/3/library/argparse.html
+- https://pyinstaller.org/en/stable/usage.html
+
