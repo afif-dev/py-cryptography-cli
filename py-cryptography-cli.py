@@ -8,18 +8,16 @@ def encryptString(args):
         key = Fernet.generate_key()
         f = Fernet(key)
         token = f.encrypt(bytes(args.text[0],'utf-8'))
-        encryptKeyOut = "Key: {}"
-        encryptTokenOut = "Token: {} \n"
-        encryptTextOut = "Text: {} \n"
         
         print("###############################")
         print("###__+^ Token Encrypted ^+__###")
         print("###############################\n")
-        print(encryptKeyOut.format(key.decode()))
-        print(encryptTokenOut.format(token.decode()))
-        print(encryptTextOut.format(f.decrypt(token).decode()))  
+        print(f"Key: {key.decode()}")
+        print(f"Token: {token.decode()}\n")
+        print(f"Text: {f.decrypt(token).decode()}\n")
         print("*Note: Keep 'Key' and 'Token' somewhere secret")
-    except:
+        
+    except Exception:
         print("Error: Invalid text or key!\n")
     
 
@@ -29,13 +27,13 @@ def decryptToken(args):
         key = bytes(args.key,'utf-8')
         f = Fernet(key)
         decrypt_txt = f.decrypt(bytes(args.text[0],'utf-8'))
-        decryptTextOut = "Text: {} \n"
 
         print("###############################")
         print("###__+^ Token Decrypted ^+__###")
         print("###############################\n")
-        print(decryptTextOut.format(decrypt_txt.decode()))
-    except:
+        print(f"Text: {decrypt_txt.decode()} \n")
+
+    except Exception:
         print("Error: Invalid token or key!\n")
 
 def main():
