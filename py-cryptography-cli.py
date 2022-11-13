@@ -3,7 +3,7 @@ from ast import Try
 from distutils.log import error
 from cryptography.fernet import Fernet
 
-def encryptString(args):
+def encrypt_string(args):
     try:
         key = Fernet.generate_key()
         f = Fernet(key)
@@ -21,7 +21,7 @@ def encryptString(args):
         print("Error: Invalid text or key!\n")
     
 
-def decryptToken(args):
+def decrypt_token(args):
     
     try:
         key = bytes(args.key,'utf-8')
@@ -55,9 +55,9 @@ Author: afif-dev https://github.com/afif-dev
 
     args = parser.parse_args()
     if args.key != None and args.text != None:
-        decryptToken(args)
+        decrypt_token(args)
     elif args.text != None:
-        encryptString(args)
+        encrypt_string(args)
 
 if __name__ == "__main__":
     main()
