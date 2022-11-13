@@ -4,9 +4,9 @@ Encrypt & decrypt string using cryptography.io
 
 CLI app included in distribution folder (dist/py-cryptography-cli.exe)
 
-![](https://github.com/afif-dev/py-cryptography-cli/blob/main/py-cryptography-cli-ss-encrypt.png)
+![](./py-cryptography-cli-ss-encrypt.png)
 
-![](https://github.com/afif-dev/py-cryptography-cli/blob/main/py-cryptography-cli-ss-decrypt.png)
+![](./py-cryptography-cli-ss-decrypt.png)
 
 ## Basic Usage
 1. Help
